@@ -1,0 +1,30 @@
+<table>
+			<thead>
+				<tr>
+					<th scope="col">IDUser</th>
+					<th scope="col">Emailadresse</th>
+					<th scope="col">Passwort</th>
+					<th scope="col">Vorname</th>
+					<th scope="col">Nachname</th>
+					<th scope="col">Geb-Datum</th>
+					<th scope="col">Reg-Zeitpunkt</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+				while($ds = $datensaetze->fetch_object()) {
+					echo('
+						<tr>
+							<td>' . $ds->IDUser . '</td>
+							<td>' . $ds->Emailadresse . '</td>
+							<td>' . $ds->Passwort . '</td>
+							<td>' . $ds->Vorname . '</td>
+							<td>' . $ds->Nachname . '</td>
+							<td>' . $ds->GebDatum . '</td>
+							<td>' . $ds->RegZeitpunkt . '</td>
+						</tr>
+					');
+				}
+				?>
+			</tbody>
+		</table>
